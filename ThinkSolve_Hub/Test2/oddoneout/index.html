@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Reasoning Task</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div class="start-screen">
+            <div class="top-section">
+                <div class="header">
+                    <h1>Think Solve Hub</h1>
+                </div>
+                <button id="startButton">START</button>
+            </div>
+        </div>
+
+        <!-- Instructions Screen (Initially hidden) -->
+        <div class="instructions-box hidden">
+            <h2>INSTRUCTIONS</h2><br>
+            <ul>
+                <li>This test consists of <b>14 questions</b> and has a duration of <b>15 minutes</b>.</li>
+                <li>The individual must choose the <b>correct option</b> from the given options.</li>
+                <li>This test consists of <b>mathematical questions.</b></li>
+            </ul>
+            <button id="continue">Continue</button>
+        </div>
+
+        <!-- Top Bar -->
+        <div class="top-bar" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 0%;"></div>
+            </div>
+            <div class="progress">Progress 1/14</div>
+            <div class="timer" id="timer">15:00</div>
+        </div>
+
+        <!-- Main Content (Initially hidden) -->
+        <div class="question-container hidden">
+            <div id="question">
+                <div id="table-container" style="margin-top: 20px;"></div>
+                <br><br>
+                <div id="question-text">Q1: Which agent has the lowest call resolution?</div>
+                <ul id="options-list" style="list-style-type: none; padding: 0; display: flex; flex-wrap: wrap;"></ul>
+            </div>
+            <div class="navigation">
+                <button id="prev" disabled>Previous</button>
+                <button id="next">Next</button>
+            </div>
+        </div>
+        
+        <!-- Score Screen (Initially hidden) -->
+        <div class="score-screen hidden">
+            <div class="score-box">
+                <h2 style="text-align: center;">Results</h2>
+                <div class="final-info">
+                    <div class="final-score" id="finalScore" style="font-size: 32px;">
+                        <h3>Your Score: 0/14</h3>
+                    </div>
+                    <div class="final-time" id="finalTime" style="font-size: 32px;">
+                        <h3>Time Taken: 00:00</h3>
+                    </div>
+                </div>                
+                <h2 style="font-size: 30px;">Interpretation:</h2>
+                <p id="interpretation-text" style="font-size: 22px;">Your score interpretation will appear here.</p>
+                <button id="back-to-dashboard-button" class="back-to-dashboard-button">Home</button>
+            </div>
+        </div>               
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
